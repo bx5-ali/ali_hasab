@@ -1,0 +1,8 @@
+{
+  "name": "Remix عالم الرياضيات للأطفال | Kids Visual Math",
+  "description": "تطبيق تعليمي تفاعلي لتعليم الأرقام، الجمع، الطرح، الضرب، والقسمة بطريقة بصرية وممتعة للأطفال عبر التعلم باللعب.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
