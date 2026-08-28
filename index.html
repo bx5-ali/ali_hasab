@@ -9,6 +9,17 @@
     <meta property="og:description" content="تطبيق تعليمي تفاعلي بأسلوب دولينجو (مسار تعلم، قلوب، نقاط خبرة، دوري العباقرة، مهام يومية) لتعليم الرياضيات والأرقام بطريقة بصرية ممتعة." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- PWA / Android Play Store Meta Tags -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    <meta name="theme-color" content="#58CC02" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="application-name" content="Duo Math Kids" />
+
     <!-- Google Fonts for child-friendly Arabic and English typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +28,20 @@
   <body class="bg-amber-50/50 text-slate-800 antialiased font-tajawal selection:bg-amber-200">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(
+            (registration) => {
+              console.log('ServiceWorker registered with scope:', registration.scope);
+            },
+            (err) => {
+              console.log('ServiceWorker registration failed:', err);
+            }
+          );
+        });
+      }
+    </script>
   </body>
 </html>
 

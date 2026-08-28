@@ -21,6 +21,7 @@ import { DuoLessonSession } from './components/DuoLessonSession';
 import { DuoLeaderboard } from './components/DuoLeaderboard';
 import { DuoQuestsModal } from './components/DuoQuestsModal';
 import { DuoShopModal } from './components/DuoShopModal';
+import { GooglePlayExportModal } from './components/GooglePlayExportModal';
 import { CountingModule } from './components/CountingModule';
 import { OperationsModule } from './components/OperationsModule';
 import { MultiplicationModule } from './components/MultiplicationModule';
@@ -38,6 +39,7 @@ export default function App() {
   const [rewardModal, setRewardModal] = useState<RewardModalData | null>(null);
   const [isQuestsOpen, setIsQuestsOpen] = useState(false);
   const [isShopOpen, setIsShopOpen] = useState(false);
+  const [isPlayStoreOpen, setIsPlayStoreOpen] = useState(false);
 
   const [soundConfig, setSoundConfig] = useState<SoundConfig>({
     soundFxEnabled: true,
@@ -262,6 +264,13 @@ export default function App() {
         onBuyStreakFreeze={handleBuyStreakFreeze}
       />
 
+      {/* Google Play / Android PWA Export Modal */}
+      <GooglePlayExportModal
+        isOpen={isPlayStoreOpen}
+        onClose={() => setIsPlayStoreOpen(false)}
+        soundConfig={soundConfig}
+      />
+
       {/* Top Navigation Bar with Duolingo Gamification Stats */}
       <Navbar
         currentModule={currentModule}
@@ -299,6 +308,10 @@ export default function App() {
         onOpenShop={() => {
           soundManager.playPop();
           setIsShopOpen(true);
+        }}
+        onOpenPlayStoreModal={() => {
+          soundManager.playPop();
+          setIsPlayStoreOpen(true);
         }}
       />
 

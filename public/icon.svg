@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#58CC02" />
+      <stop offset="100%" stop-color="#2B8200" />
+    </linearGradient>
+    <linearGradient id="bellyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2F7D8" />
+    </linearGradient>
+    <linearGradient id="beakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA800" />
+      <stop offset="100%" stop-color="#E07000" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Squircle App Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Math floating symbols in background -->
+  <g opacity="0.22" fill="#FFFFFF" font-family="sans-serif" font-weight="900">
+    <text x="50" y="110" font-size="64">+</text>
+    <text x="410" y="120" font-size="64">×</text>
+    <text x="420" y="420" font-size="64">÷</text>
+    <text x="60" y="410" font-size="70">−</text>
+    <text x="236" y="80" font-size="54">123</text>
+  </g>
+
+  <!-- Owl Body -->
+  <g filter="url(#shadow)">
+    <!-- Ears / Head Tufts -->
+    <path d="M120 180 L160 110 L210 160 Z" fill="#46A302" />
+    <path d="M392 180 L352 110 L302 160 Z" fill="#46A302" />
+
+    <!-- Main Head & Body -->
+    <ellipse cx="256" cy="275" rx="160" ry="165" fill="#58CC02" stroke="#46A302" stroke-width="8" />
+
+    <!-- White Belly -->
+    <ellipse cx="256" cy="320" rx="105" ry="110" fill="url(#bellyGrad)" />
+
+    <!-- Belly Math Equation Badge -->
+    <rect x="186" y="325" width="140" height="52" rx="26" fill="#FFD700" stroke="#E5A500" stroke-width="4" />
+    <text x="256" y="360" font-family="'Fredoka', 'Tajawal', sans-serif" font-size="30" font-weight="900" fill="#7A4B00" text-anchor="middle">
+      1 + 2 = 3
+    </text>
+
+    <!-- Owl Eyes (Huge Duolingo Style Eyes) -->
+    <!-- Left Eye Outer -->
+    <circle cx="195" cy="215" r="56" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="4" />
+    <!-- Right Eye Outer -->
+    <circle cx="317" cy="215" r="56" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="4" />
+
+    <!-- Left Pupil -->
+    <circle cx="205" cy="215" r="28" fill="#1CB0F6" />
+    <circle cx="208" cy="215" r="20" fill="#0077B6" />
+    <circle cx="214" cy="207" r="9" fill="#FFFFFF" />
+
+    <!-- Right Pupil -->
+    <circle cx="307" cy="215" r="28" fill="#1CB0F6" />
+    <circle cx="304" cy="215" r="20" fill="#0077B6" />
+    <circle cx="298" cy="207" r="9" fill="#FFFFFF" />
+
+    <!-- Owl Beak -->
+    <path d="M236 242 Q256 242 276 242 L256 292 Z" fill="url(#beakGrad)" stroke="#B35900" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- Rosy Cheeks -->
+    <ellipse cx="145" cy="265" rx="18" ry="12" fill="#FF4B4B" opacity="0.4" />
+    <ellipse cx="367" cy="265" rx="18" ry="12" fill="#FF4B4B" opacity="0.4" />
+
+    <!-- Feet -->
+    <ellipse cx="200" cy="435" rx="24" ry="14" fill="#FFA800" />
+    <ellipse cx="312" cy="435" rx="24" ry="14" fill="#FFA800" />
+
+    <!-- Graduation Scholar Cap / Magic Sparkle -->
+    <polygon points="256,70 340,110 256,140 172,110" fill="#1E293B" stroke="#0F172A" stroke-width="3" />
+    <rect x="236" y="130" width="40" height="16" rx="6" fill="#334155" />
+    <!-- Tassel -->
+    <path d="M340 110 Q350 145 352 165" stroke="#FFD700" stroke-width="5" stroke-linecap="round" fill="none" />
+    <circle cx="352" cy="168" r="7" fill="#FFD700" />
+  </g>
+</svg>

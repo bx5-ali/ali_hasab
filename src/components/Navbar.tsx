@@ -16,6 +16,7 @@ import {
   Layers,
   Divide,
   Hash,
+  Smartphone,
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -29,6 +30,7 @@ interface NavbarProps {
   onToggleLanguage: () => void;
   onOpenQuests: () => void;
   onOpenShop: () => void;
+  onOpenPlayStoreModal: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -41,6 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onToggleLanguage,
   onOpenQuests,
   onOpenShop,
+  onOpenPlayStoreModal,
 }) => {
   const isAr = soundConfig.language === 'ar';
 
@@ -181,6 +184,17 @@ export const Navbar: React.FC<NavbarProps> = ({
               title={isAr ? 'متجر الجواهر' : 'Gem Shop'}
             >
               <ShoppingBag className="w-4 h-4" />
+            </button>
+
+            {/* Google Play / Android PWA Button */}
+            <button
+              id="playstore-export-btn"
+              onClick={onOpenPlayStoreModal}
+              className="flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-black border border-emerald-300 bg-emerald-600/90 hover:bg-emerald-500 text-white backdrop-blur-xl shadow-md transition-all active:scale-95 cursor-pointer"
+              title={isAr ? 'جاهزية جوجل بلاي والتثبيت' : 'Google Play & Android Install'}
+            >
+              <Smartphone className="w-3.5 h-3.5 text-white animate-pulse" />
+              <span className="hidden xs:inline">{isAr ? 'جوجل بلاي 📲' : 'Play Store'}</span>
             </button>
 
             {/* Sound FX Toggle */}
